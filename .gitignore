@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.DS_Store
+
+# User-requested exclusions
+resumes/
+Skills/
+.agent/workflows/
+deploy.md
