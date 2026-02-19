@@ -8,7 +8,7 @@ interface Project {
     description: string;
     tags: string[];
     impact: string;
-    status: 'LIVE' | 'POLISHING' | 'PLANNED';
+    status: 'LIVE' | 'POLISHING' | 'PLANNED' | 'IN PROGRESS';
     specs: { label: string; value: string }[];
     github?: string;
 }
@@ -58,15 +58,15 @@ const projects: Project[] = [
     },
     {
         id: "PROJ-04",
-        title: "Distributed Backend",
-        description: "Planned high-scale distributed systems project focusing on concurrency, performance tuning, and robust service architecture patterns.",
-        tags: ["Go", "Python", "PostgreSQL", "Docker"],
-        impact: "Will demonstrate advanced backend reasoning and enterprise-grade system design patterns.",
-        status: "PLANNED",
+        title: "OctagonOdds",
+        description: "In-progress UFC betting odds predictor that combines fighter statistics, stylistic matchup features, and contextual fight factors to estimate realistic win probabilities and identify market inefficiencies.",
+        tags: ["Python", "FastAPI", "Next.js", "PostgreSQL", "XGBoost", "Docker"],
+        impact: "Building an end-to-end ML + product pipeline with automated data ingestion, model-driven odds conversion, and a custom matchup simulator for scenario analysis.",
+        status: "IN PROGRESS",
         specs: [
-            { label: "Scope", value: "Distributed" },
-            { label: "Storage", value: "Postgres" },
-            { label: "Protocol", value: "gRPC/HTTP" }
+            { label: "Domain", value: "Sports ML" },
+            { label: "Backend", value: "FastAPI" },
+            { label: "Data", value: "UFC Stats" }
         ],
     },
 ];
@@ -104,7 +104,16 @@ const Projects: React.FC = () => {
                                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '24px', alignItems: 'center' }}>
                                     <h3 className="display-text" style={{ fontSize: '1.5rem', textTransform: 'none', letterSpacing: 'normal' }}>{project.title}</h3>
                                     <div className="status-indicator">
-                                        <div className="status-dot" style={{ background: project.status === 'LIVE' ? '#22c55e' : (project.status === 'POLISHING' ? 'var(--security-amber)' : 'var(--text-muted)') }}></div>
+                                        <div
+                                            className="status-dot"
+                                            style={{
+                                                background: project.status === 'LIVE'
+                                                    ? '#22c55e'
+                                                    : (project.status === 'IN PROGRESS'
+                                                        ? 'var(--accent)'
+                                                        : (project.status === 'POLISHING' ? 'var(--security-amber)' : 'var(--text-muted)'))
+                                            }}
+                                        ></div>
                                         <span className="mono uppercase" style={{ fontSize: '10px' }}>{project.status}</span>
                                     </div>
                                 </div>
