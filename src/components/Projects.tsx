@@ -48,7 +48,7 @@ const projects: Project[] = [
         description: "Completed full-stack molecular data platform for extracting, normalizing, and storing compound records. Built with a C-powered parsing core, Python processing pipelines, and a web UI for faster exploration of chemical datasets.",
         tags: ["C", "Python", "SQL", "JavaScript"],
         impact: "Delivered a production-ready cross-language system that improves reliability and throughput for chemistry data ingestion and query workflows.",
-        status: "POLISHING",
+        status: "LIVE",
         specs: [
             { label: "Backend", value: "C + Python" },
             { label: "Database", value: "SQL" },
