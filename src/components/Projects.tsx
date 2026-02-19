@@ -26,7 +26,7 @@ const projects: Project[] = [
             { label: "Environment", value: "AWS EC2" },
             { label: "Core Focus", value: "Observability" }
         ],
-        github: "https://github.com/sukhman785",
+        github: "https://github.com/sukhman785/Cloud-AutoOps",
     },
     {
         id: "PROJ-02",
@@ -40,7 +40,7 @@ const projects: Project[] = [
             { label: "Security", value: "Cloud-Native" },
             { label: "Workflow", value: "Automated" }
         ],
-        github: "https://github.com/sukhman785",
+        github: "https://github.com/sukhman785/Terraform-AWS-Security-Baseline",
     },
     {
         id: "PROJ-03",
