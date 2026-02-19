@@ -45,16 +45,16 @@ const projects: Project[] = [
     {
         id: "PROJ-03",
         title: "MolView Platform",
-        description: "Full-stack chemical data extraction and storage engine. High-efficiency backend processing for complex compound structures with RESTful API integration.",
+        description: "Completed full-stack molecular data platform for extracting, normalizing, and storing compound records. Built with a C-powered parsing core, Python processing pipelines, and a web UI for faster exploration of chemical datasets.",
         tags: ["C", "Python", "SQL", "JavaScript"],
-        impact: "Demonstrates cross-language systems engineering and advanced database architecture for specialized data.",
+        impact: "Delivered a production-ready cross-language system that improves reliability and throughput for chemistry data ingestion and query workflows.",
         status: "POLISHING",
         specs: [
-            { label: "Backend", value: "C/Python" },
-            { label: "Database", value: "Relational" },
-            { label: "API Type", value: "REST" }
+            { label: "Backend", value: "C + Python" },
+            { label: "Database", value: "SQL" },
+            { label: "Maturity", value: "Completed" }
         ],
-        github: "https://github.com/sukhman785",
+        github: "https://github.com/sukhman785/molview",
     },
     {
         id: "PROJ-04",
